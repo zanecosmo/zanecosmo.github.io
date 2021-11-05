@@ -9,13 +9,13 @@
 
     <nav>
 
-        <div class="menu-bottom">
+        <!-- <div class="menu-bottom">
             <div class="menu-face">
                 <div class="upper-bar menu-bar"></div>
                 <div class="middle-bar menu-bar"></div>
                 <div class="lower-bar menu-bar"></div>
             </div>
-        </div>
+        </div> -->
 
         <header class="logo">
             <div class="logo-lower logo-text">zanecosmo</div>
@@ -25,7 +25,7 @@
             <div class="logo-face logo-text">zanecosmo</div>
         </header>
 
-        <div class="drop-down-unrevealed">
+        <!-- <div class="drop-down-unrevealed">
             <div class="triangular"></div>
             <section class="drop-down-menu">
                 <a id="home" class="nav-button" href="/">home</a>
@@ -34,40 +34,69 @@
                 <a id="resume" class="nav-button" href="/resume">resumé</a>
                 <a id="contact" class="nav-button">contact me</a>
             </section>
-        </div>
+        </div> -->
 
     </nav>
 
     <div class="background-edges"></div>
     <div class="background-middle"></div>
+    
     <main class="container">
+        
         <!-- <header class="page-title">@ViewData["PageHeader"]</header> -->
         <!-- @RenderBody() -->
-        <div class="homePage">
-
-            <section class="welcome">
-                hello and welcome
-            </section>
-            
+        
+        <section class="home section">
+            <header class="header">Hello and Welcome</header>
             <img src="portrait.jpg" class="image"></img>
-        
-            <section class="intro">
-                My name is Zane Gray (middle name Cosmo).
-            </section>
-        
+            <section class="intro">My name is Zane Gray (middle name Cosmo).</section>
             <br />
-        
             <section class="blurb">
-                I'm an aspiring software developer with an interest in Fullstack Web Dvelopment, Embedded Software, Automation, and Physics Engines/Simulation.'
+                I'm an aspiring software developer with an interest in Fullstack Web Development, Embedded Software, Automation, and Physics Engines/Simulation.'
             </section>
-        
             <section class="social-links">
                 <a href="https://github.com/zanecosmo" class="github">my GitHub</a>
                 <a href="https://www.linkedin.com/in/zane-cosmo-gray/" class="linked-in">my LinkedIn</a>
             </section>
+        </section>
+
+        <br/>
+        <br/>
+
+        <section class="about section">
+            <header class="header">About Me</header>
+            <div>
+                In previous years I worked as a carpenter, where my primary role was to build structures with whatever tools were available.
+                Since I have begun my journey into software development, I have seen that there are many parallels between the two fields.
             
-        </div>
+            </div>
+        </section>
+
+        <br/>
+        <br/>
+        
+        <section class="portfolio section">
+            <header class="header">Portfolio</header>
+            <div>(no links yet)</div>
+            <!-- <fieldset>
+                <legend>Card Game</legend>
+                <div class="description">
+                    This is a word-matching card game built with React.
+                    A theme will be given at the top of the page, and the player must type words that are assoiated with that theme.
+                    The game is not built out fully, but serves as a proof of concept.
+                </div>
+            </fieldset> -->
+        </section>
+
+        <br/>
+        <br/>
+        
+        <section class="resume section">
+            <header class="header">Resumé</header>
+            <a href="zaneResume.pdf" title="zaneResume" height="100%" width="100%">click here for resumé</a>
+        </section>
     </main>
+
 
 
 
