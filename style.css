@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+:root {
+    --menu-shadow: 
+        1px 1px 0px 0px black, 
+        2px 2px 0px 0px black, 
+        3px 3px 0px 0px black;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    align-items: center;
+}
+
+.menu-bottom {
+    position: relative;
+    min-width: 30px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 12px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+    .menu-bottom .menu-face:hover .menu-bar {
+        transform: translate(3px, 3px);
+        box-shadow: none;
+    }
+
+.menu-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -3px;
+    left: -3px;
+    vertical-align: middle;
+}
+
+.menu-bar {
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: var(--menu-shadow);
+    transition: all 150ms ease;
+}
+
+.upper-bar {
+    top: 0%;
+}
+
+.middle-bar {
+    top: 40%;
+}
+
+.lower-bar {
+    top: 80%;
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+    min-width: 250px;
+    margin-left: 13px;
+    margin-right: 10px;
+    padding-bottom: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    display: flex;
+    flex-grow: 1;
+}
+
+.logo-text {
+    position: absolute;
+    font-size: 2.5em;
+    bottom: 2px;
+}
+
+.logo-face {
+    position: absolute;
+    color: red;
+    padding-bottom: 4px;
+    padding-left: 1px;
+}
+
+.logo-upper {
+    position: absolute;
+    padding-bottom: 4px;
+    padding-left: 1px;
+}
+
+.logo-middle-one {
+    position: absolute;
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+
+.logo-middle-two {
+    position: absolute;
+    padding-bottom: 2px;
+    padding-left: 3px;
+}
+
+.logo-lower {
+    position: absolute;
+    padding-bottom: 1px;
+    padding-left: 4px;
+}
+
+.triangular {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 12px solid white;
+    z-index: 3;
+}
+
+.drop-down-unrevealed {
+    position: absolute;
+    width: 100vw;
+    height: 0vh;
+    top: 60px;
+    left: 0px;
+    overflow: hidden;
+    transition: height 200ms linear;
+}
+
+.drop-down-revealed {
+    height: 55vh;
+}
+
+.drop-down-menu {
+    position: absolute;
+    width: 100vw;
+    /* height: 100px; */
+    top: 10px;
+    left: 0px;
+    background-color: white;
+    /* border-top: 1px solid black; */
+    /* border-bottom: 1px solid black; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-button {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    transition: all 150ms ease;
+}
+
+    .nav-button:hover {
+        padding-left: 18px;
+    }
+
+
+.background-edges{
+    position: fixed;
+    top: 0px; left: 0px;
+    width: 100vw; height: 100vh;
+    background-color: lightblue;
+    z-index: -4;
+}
+
+.background-middle {
+    position: fixed;
+    width: 90%; height: 100%;
+    top: 60px; left: 5%;
+    background-color: white;
+    z-index: -3;
+}
+
+.container {
+    position: relative;
+    width: 90%; height: 100%;
+    top: 60px; left: 5%;
+    background-color: transparent;
+    /* padding: 5px; */
+    
+    display: flex;
+    flex-direction: column;
+    z-index: -2;
+}
+
+.page-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;;
+    color: black;
+    max-width: 1000px;
+    /* min-width: 0px; min-height: 0px;
+    overflow: hidden; */
+
+    flex-shrink: 3;
+}
+
+.welcome {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;;
+    color: black;
+    max-width: 1000px;
+}
+
+.image {
+    border: 1px solid black;
+    box-shadow: var(--menu-shadow);
+    max-width: 304px; height: auto;
+}
+
+.social-links {
+    position: relative;
+    margin-top: 10px;
+}
+
+.github, .linked-in {
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;
+    box-shadow: var(--menu-shadow);
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 150ms ease;
+    margin-bottom: 10px;
+}
+
+.github {
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+.github:hover {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+.linked-in {
+    background-color: rgb(41, 57, 157);
+    color: white;
+}
+
+.linked-in:hover {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
