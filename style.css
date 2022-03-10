@@ -85,7 +85,7 @@ nav {
     font-size: 5em;
     /* margin-top: 50px; */
     color: var(--text-color);
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     border-bottom: 1px solid rgb(220, 220, 220);
     text-align: center;
 }
