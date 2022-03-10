@@ -332,6 +332,7 @@ section {
 }
 
 .about-blurb {
+    font-size: 20px;
     max-width: 700px;
     color: var(--text-color);
     text-align: justify;
@@ -388,6 +389,7 @@ section {
 }
 
 .project-name {
+    padding-top: 10vmin;
     font-size: 2em;
     color: var(--text-color);
 }
@@ -396,7 +398,7 @@ section {
     max-width: 500px;
     padding:20px 0px 20px 0px;
     text-align: justify;
-    font-size: .75em;
+    font-size: 20px;
 
     color: var(--text-color);
 }
@@ -488,6 +490,7 @@ section {
     background-color: rgb(245, 245, 245);
     border-radius: 0px;
     padding: 8px;
+    font-size: 20px;
 }
 
 .text-input {
@@ -546,7 +549,11 @@ section {
         display: flex;
     }
 
-    .logo {
-        font-size: 30px;
+    .about-blurb {
+        line-height: 35px;
+    }
+
+    .project-blurb {
+        line-height: 35px;
     }
 }
