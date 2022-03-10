@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 3vmin;
+
+    /* border: 1px solid blue; */
 }
 
 :root {
@@ -13,6 +15,7 @@
 }
 
 body {
+    margin: 0;
     /* border: 4px solid purple; */
 
     display: flex;
@@ -39,13 +42,13 @@ nav {
 .menu {
     min-width: 30px;
     height: 16px;
-    margin-left: 30px;
+    margin-left: 10px;
     background-color: white;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     cursor: pointer;
     transition: all 125ms ease;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -64,7 +67,7 @@ nav {
 
 .logo {
     min-width: 250px;
-    margin-left: 30px;
+    margin-left: 10px;
     padding-bottom: 6px;
     
     letter-spacing: .1em;
@@ -76,13 +79,17 @@ nav {
 }
 
 .home-text-wrapper {
+    margin-top: 1vmin;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .home-title {
-    font-size: 5em;
+    font-size: 12vmin;
+    min-width: 200px;
+    width: 70vw;
     /* margin-top: 50px; */
     color: var(--text-color);
     /* border: 1px solid blue; */
@@ -115,12 +122,6 @@ section {
     align-items: center;
 }
 
-.image {
-    min-width: 408px;
-    height: auto;
-    border-radius: 5px;
-}
-
 .floating-arrow-icon {
     position: relative;
     top: 100px;
@@ -145,7 +146,7 @@ section {
 
 #skills {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
@@ -164,17 +165,12 @@ section {
     align-items: center;
 }
 
-.icon {
-    width: 40px;
-    height: auto;
-}
-
 .contact-button {
     position: relative;
     height: 45px;
     width: 180px;
     margin-left: 5px;
-    margin-right: 30px;
+    margin-right: 10px;
     border: 1px solid var(--button-fill);
 
     color: var(--button-fill);
@@ -238,30 +234,39 @@ section {
 .portfolio-button, .resume-button {
     position: relative;
     min-height: 60px;
-    min-width: 260px;
+    width: 50%;
     margin-top: 10px;
 
     text-decoration: none;
     
     cursor: pointer;
     transition: all 125ms ease;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolio-button {
     background-color: var(--button-fill);
     color: white;
+    max-width: 280px;
 }
 
 .resume-button {
     border: 1px solid var(--button-fill);
     color: var(--button-fill);
+    max-width: 280px;;
 }
 
 .portfolio-text, .resume-text {
-    position: absolute;
-    left: 50px;
-    top: 12px;
-    width: 210px;
+    /* position: absolute; */
+    /* left: 50px;
+    top: 12px; */
+    /* width: 100%; */
+
+    padding-left: 10px;
 
     letter-spacing: .1em;
     font-size: 1.5em;
@@ -286,11 +291,12 @@ section {
 }
 
 .portfolio-icon, .download-icon {
-    position: absolute;
+    /* position: absolute;
     left: 10px;
-    top: 10px;
-    height: 40px;
-    width: auto;
+    top: 10px; */
+    width: 20%;
+    height: auto;
+    max-width: 40px;
 }
 
 #portfolio {
@@ -299,9 +305,9 @@ section {
 }
 
 .title {
-    width: 500px;
+    max-width: 500px;
     height: 90px;
-    margin-top: 200px;
+    margin-top: 20vmin;
 
     display: flex;
     flex-direction: row;
@@ -310,18 +316,18 @@ section {
 }
 
 .title-text {
-    font-size: 3em;
+    font-size: 10vmin;
     color: var(--text-color);
     margin-left: 30px;
 }
 
 .portfolio-title-icon {
-    height: 70px;
+    height: 2em;
     width: auto;
 }
 
 .about-title-icon {
-    height: 60px;
+    height: 2em;
     width: auto;
 }
 
@@ -333,7 +339,8 @@ section {
 
 #about {
     margin-top: 15px;
-    padding: 100px 0px 100px 0px;
+    /* padding: 100px 0px 100px 0px; */
+    max-width: 80vmin;
     /* border-top: 1px solid rgb(220, 220, 220); */
     /* border-bottom: 1px solid rgb(220, 220, 220); */
 
@@ -344,21 +351,33 @@ section {
 }
 
 .project-section {
-    width: 100%;
+    /* width: 100vmin; */
     margin-top: 15px;
     /* border-top: 1px solid rgb(220, 220, 220); */
-    /* border-bottom: 1px solid rgb(220, 220, 220); */
-    padding: 100px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    padding: 20px 10% 30px 10%;
 
     display: flex;
     flex-direction: row;
 }
 
+.image-container {
+    width: 50vmin;
+    height: 50vmin;
+    box-shadow: 0px 3px 6px 1px rgb(220, 220, 220);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
 .project-image {
-    height: 300px;
-    width: auto;
+    /* min-width: 100px; */
+    width: 80%;
+    height: auto;
+    /* width: auto; */
     border: 1px solid rgb(220, 220, 220);
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .project-text-wrapper {
@@ -391,8 +410,8 @@ section {
 
 .project-link, .repo-link {
     height: 30px;
-    width: 170px;
-    padding: 20px 0px 20px 0px;
+    max-width: 170px;
+    padding: 20px 10px 20px 10px;
     margin-left: 15px;
 
     background-color: var(--button-fill);
@@ -414,19 +433,23 @@ section {
 .button-text {
     letter-spacing: .1em;
     color: rgb(255, 255, 255);
+    padding-left: 10px;
 }
 
 .repo-svg {
-    width: 28px;
+    width: 20%;
     height: auto;
 }
 
 .play {
-    width: 20px;
+    width: 16%;
     height: auto;
 }
 
 #contact {
+    width: 80%;
+
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -440,7 +463,8 @@ section {
 }
 
 .form {
-    width: 600px;
+    width: 100%;
+    max-width: 700px;
 
     display: flex;
     flex-direction: column;
@@ -480,7 +504,7 @@ section {
 }
 
 .submit-button {
-    width: 200px;
+    width: 50%;
 
     border: none;
     margin: 10px;
@@ -497,9 +521,32 @@ section {
     background-color: rgb(225, 70, 145);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
+    .image-container {
+        width: 80vmin;
+        height: 80vmin;
+        margin-bottom: 20px;
+    }
+
     .project-section {
-        /* background-color: blue; */
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .social-links-wrapper {
+        display: none;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 30px;
     }
 }
