@@ -1,10 +1,7 @@
-const contactButton = document.querySelector(".contact-button");
-const portfolioButton = document.querySelector(".portfolio-button");
-const logoButton = document.querySelector(".logo");
+const affirmationScreen = document.querySelector(".affirmation-screen");
+const acceptButton = document.querySelector(".accept-button");
 
-contactButton.addEventListener("click", () => window.scroll(0, 2669));
-portfolioButton.addEventListener("click", () => window.scroll(0, 1404));
-logoButton.addEventListener("click", () => window.scroll(0, 0));
+let isModalOpen = false;
 
 const senderIdentifier = "ZANE";
 
@@ -42,6 +39,13 @@ const extractText = () => {
     return message;
 };
 
+const onSuccessResponse = () => affirmationScreen.classList.add("visible");
+
+const returnToPage = () => {
+    for (const input in inputs) inputs[input].value = ""
+    affirmationScreen.classList.remove("visible");
+};
+
 const sendToServer = () => {
     const message = extractText();
 
@@ -59,8 +63,9 @@ const sendToServer = () => {
 
     fetch(serverURL, jsonMessage)
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(_res => onSuccessResponse())
         .catch(error => console.log(error));
 };
 
 sendButton.addEventListener("click", sendToServer);
+acceptButton.addEventListener("click", returnToPage)

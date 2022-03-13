@@ -69,6 +69,7 @@ nav {
     min-width: 250px;
     margin-left: 10px;
     padding-bottom: 6px;
+    text-decoration: none;
     
     letter-spacing: .1em;
     color: var(--text-color);
@@ -333,6 +334,7 @@ section {
 
 .about-blurb {
     font-size: 20px;
+    line-height: 35px;
     max-width: 700px;
     color: var(--text-color);
     text-align: justify;
@@ -464,6 +466,10 @@ section {
     margin-bottom: 20px;
 }
 
+.contact-text {
+    font-size: 20px;
+}
+
 .form {
     width: 100%;
     max-width: 700px;
@@ -522,6 +528,60 @@ section {
 
 .submit-button:hover {
     background-color: rgb(225, 70, 145);
+}
+
+.affirmation-screen {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    background-color: rgb(255, 255, 255, 0.5);
+    z-index: 2;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.affirmation-modal {
+    /* height: 60%; */
+    /* width: 80%; */
+
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 6px 1px rgb(220, 220, 220);
+    opacity: 1;
+    /* border: 1px solid black; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accept-button {
+    display: inline-block;
+
+    background-color: var(--button-fill);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+    user-select: none;
+    cursor: pointer;
+
+    letter-spacing: .2em;
+}
+
+.accept-button:hover {
+    background-color: rgb(225, 70, 145);;
+}
+
+
+.visible {
+    display: flex;
 }
 
 @media screen and (max-width: 1000px) {
