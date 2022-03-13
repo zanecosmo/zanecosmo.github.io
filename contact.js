@@ -1,7 +1,6 @@
-const affirmationScreen = document.querySelector(".affirmation-screen");
+const sendButton = document.querySelector(".submit-button");
 const acceptButton = document.querySelector(".accept-button");
-
-let isModalOpen = false;
+const affirmationScreen = document.querySelector(".affirmation-screen");
 
 const senderIdentifier = "ZANE";
 
@@ -11,14 +10,13 @@ const inputs = {
     message: document.querySelector(".message-input")
 };
 
-const sendButton = document.querySelector(".submit-button");
 
 const hasNoCharacters = (string) => {
     for (char of string) {if (char !== " ") return false};
     return true;
 };
 
-const extractText = () => {
+const extractFormText = () => {
     const message = {identifier: senderIdentifier};
 
     for (const input in inputs) {
@@ -47,7 +45,7 @@ const returnToPage = () => {
 };
 
 const sendToServer = () => {
-    const message = extractText();
+    const message = extractFormText();
 
     const jsonMessage = {
         method: "POST",
@@ -59,7 +57,7 @@ const sendToServer = () => {
     };
 
     const serverURL = "https://zane-smtp-server.herokuapp.com/send-email";
-    const testServer = "http://127.0.0.1:4000/send-email"
+    // const testServer = "http://127.0.0.1:4000/send-email"
 
     fetch(serverURL, jsonMessage)
         .then(res => res.json())
@@ -68,4 +66,4 @@ const sendToServer = () => {
 };
 
 sendButton.addEventListener("click", sendToServer);
-acceptButton.addEventListener("click", returnToPage)
+acceptButton.addEventListener("click", returnToPage);
