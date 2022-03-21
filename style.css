@@ -96,6 +96,8 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    user-select: none;
 }
 
 .dropdown-button {
@@ -225,6 +227,7 @@ section {
 
     cursor: pointer;
     transition: all 100ms ease;
+    user-select: none;
 
     /* display: flex;
     flex-direction: row;
@@ -352,7 +355,7 @@ section {
 }
 
 .title {
-    max-width: 500px;
+    max-width: 700px;
     height: 90px;
     margin-top: 20vmin;
 
@@ -453,22 +456,23 @@ section {
 
 .link-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
 }
 
 .project-link, .repo-link {
     height: 30px;
-    max-width: 170px;
+    width: 200px;
     padding: 20px 10px 20px 10px;
-    margin-left: 15px;
+    margin: 0 0 10px 15px;
 
     background-color: var(--button-fill);
 
     text-decoration: none;
     cursor: pointer;
     transition: all 125ms ease;
+    user-select: none;
 
     display: flex;
     flex-direction: row;
@@ -482,17 +486,18 @@ section {
 
 .button-text {
     letter-spacing: .1em;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     padding-left: 10px;
 }
 
 .repo-svg {
-    width: 20%;
+    width: 16%;
     height: auto;
 }
 
-.play {
-    width: 16%;
+.play-svg {
+    width: 14%;
     height: auto;
 }
 
@@ -569,6 +574,8 @@ section {
     letter-spacing: .1em;;
     cursor: pointer;
     text-align: center;
+
+    user-select: none;
     
 }
 
