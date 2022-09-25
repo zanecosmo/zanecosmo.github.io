@@ -1,10 +1,6 @@
-const contactButton = document.querySelector(".contact-button");
-const portfolioButton = document.querySelector(".portfolio-button");
-const logoButton = document.querySelector(".logo");
-
-contactButton.addEventListener("click", () => window.scroll(0, 2669));
-portfolioButton.addEventListener("click", () => window.scroll(0, 1404));
-logoButton.addEventListener("click", () => window.scroll(0, 0));
+const sendButton = document.querySelector(".submit-button");
+const acceptButton = document.querySelector(".accept-button");
+const affirmationScreen = document.querySelector(".affirmation-screen");
 
 const senderIdentifier = "ZANE";
 
@@ -14,14 +10,13 @@ const inputs = {
     message: document.querySelector(".message-input")
 };
 
-const sendButton = document.querySelector(".submit-button");
 
 const hasNoCharacters = (string) => {
     for (char of string) {if (char !== " ") return false};
     return true;
 };
 
-const extractText = () => {
+const extractFormText = () => {
     const message = {identifier: senderIdentifier};
 
     for (const input in inputs) {
@@ -42,8 +37,15 @@ const extractText = () => {
     return message;
 };
 
+const onSuccessResponse = () => affirmationScreen.classList.add("visible");
+
+const returnToPage = () => {
+    for (const input in inputs) inputs[input].value = ""
+    affirmationScreen.classList.remove("visible");
+};
+
 const sendToServer = () => {
-    const message = extractText();
+    const message = extractFormText();
 
     const jsonMessage = {
         method: "POST",
@@ -55,12 +57,13 @@ const sendToServer = () => {
     };
 
     const serverURL = "https://zane-smtp-server.herokuapp.com/send-email";
-    const testServer = "http://127.0.0.1:4000/send-email"
+    // const testServer = "http://127.0.0.1:4000/send-email"
 
     fetch(serverURL, jsonMessage)
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(_res => onSuccessResponse())
         .catch(error => console.log(error));
 };
 
 sendButton.addEventListener("click", sendToServer);
+acceptButton.addEventListener("click", returnToPage);
