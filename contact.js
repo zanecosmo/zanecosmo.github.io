@@ -56,7 +56,7 @@ const sendToServer = () => {
         body: JSON.stringify(message)
     };
 
-    const serverURL = "https://zane-smtp-server.herokuapp.com/send-email";
+    const serverURL = "http://100.25.219.234:4000/send-email";
     // const testServer = "http://127.0.0.1:4000/send-email"
 
     fetch(serverURL, jsonMessage)
