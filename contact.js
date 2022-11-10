@@ -10,7 +10,6 @@ const inputs = {
     message: document.querySelector(".message-input")
 };
 
-
 const hasNoCharacters = (string) => {
     for (char of string) {if (char !== " ") return false};
     return true;
