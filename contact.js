@@ -16,11 +16,6 @@ const hasNoCharacters = (string) => {
     return true;
 };
 
-/etc/letsencrypt/live/email.zanecosmo.com/fullchain.pem
-/etc/letsencrypt/live/email.zanecosmo.com/privkey.pem
-
-
-
 const extractFormText = () => {
     const message = {identifier: senderIdentifier};
 
