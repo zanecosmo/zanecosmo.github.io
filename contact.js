@@ -16,6 +16,11 @@ const hasNoCharacters = (string) => {
     return true;
 };
 
+/etc/letsencrypt/live/email.zanecosmo.com/fullchain.pem
+/etc/letsencrypt/live/email.zanecosmo.com/privkey.pem
+
+
+
 const extractFormText = () => {
     const message = {identifier: senderIdentifier};
 
@@ -56,7 +61,7 @@ const sendToServer = () => {
         body: JSON.stringify(message)
     };
 
-    const serverURL = "https://100.25.219.234:4000/send-email";
+    const serverURL = "https://email.zanecosmo.com/send-email";
     // const testServer = "http://127.0.0.1:4000/send-email"
 
     fetch(serverURL, jsonMessage)
