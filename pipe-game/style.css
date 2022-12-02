@@ -1,0 +1,24 @@
+:root {
+  --render-color: rgb(170, 255, 0);
+  --screen-color: rgb(190, 0, 190);
+}
+
+* {
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--render-color);
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#screen {
+  position: relative;
+  top: 20px;
+  /* border: 2px solid var(--render-color); */
+  /* background-color: var(--screen-color); */
+}
