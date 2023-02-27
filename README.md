@@ -6,13 +6,13 @@ My purposes for this site are fairly straightforward:
 - Demonstrate some level of comepetence with web design, developement, programming, hosting, and other software-related skills for potential employers, clients, and/or business partners.
 - Have fun making my own website!
 
-## How it Works
-Simply visit https://zanecosmo.com/. Feel free to send a message using the "Contact Me" form!
-
 #### Possible Features:
 - Rework the color palette and site-layout to something more modern and pleasing to the eye.
 - Improve UI components and layout associated with the list of portfolio projects.
 - Make the site more visually interesting by adding tasteful amounts of animation and relevent media.
+
+## How it Works
+Simply visit https://zanecosmo.com/. Feel free to send a message using the "Contact Me" form!
 
 ## About
 Currently the site is hosted from an AWS S3 bucket, with the interactive demos being hosted on various other platforms. The site was created using basic HTML, CSS, and Javascript.
